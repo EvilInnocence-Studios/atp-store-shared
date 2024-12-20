@@ -21,4 +21,4 @@ export declare interface IProduct {
     thumbnailCaption: string | null;
 }
 
-export type NewProduct = NewObj<IProduct>;
+export type NewProduct = Partial<NewObj<IProduct>>;
