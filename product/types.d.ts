@@ -17,8 +17,8 @@ export declare interface IProduct {
     metaTitle: string | null;
     metaDescription: string | null;
     metaKeywords: string | null;
-    thumbnail: string | null;
-    thumbnailCaption: string | null;
+    thumbnailId: number | null;
+    mainImageId: number | null;
 }
 
 export type NewProduct = Partial<NewObj<IProduct>>;
