@@ -22,3 +22,11 @@ export declare interface IProduct {
 }
 
 export type NewProduct = Partial<NewObj<IProduct>>;
+
+export declare interface IProductMedia {
+    id: number;
+    productId: number;
+    url: string;
+    caption: string;
+    order: number;
+}
