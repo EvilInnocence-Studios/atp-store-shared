@@ -21,6 +21,10 @@ export declare interface IProduct {
     mainImageId: number | null;
 }
 
+export declare interface IProductFull extends IProduct {
+    tags: string[];
+}
+
 export type NewProduct = Partial<NewObj<IProduct>>;
 
 export declare interface IProductMedia {
