@@ -23,6 +23,7 @@ export declare interface IProduct {
 
 export declare interface IProductFull extends IProduct {
     tags: string[];
+    thumbnailUrl: string;
 }
 
 export type NewProduct = Partial<NewObj<IProduct>>;
