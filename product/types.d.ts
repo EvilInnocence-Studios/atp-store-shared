@@ -35,3 +35,9 @@ export declare interface IProductMedia {
     caption: string;
     order: number;
 }
+
+export declare interface IProductFile {
+    id: number;
+    fileName: string;
+    folder: string;
+}
