@@ -38,6 +38,7 @@ export declare interface IProductMedia {
 
 export declare interface IProductFile {
     id: number;
+    productId: number;
     fileName: string;
     folder: string;
 }
