@@ -42,3 +42,26 @@ export declare interface IProductFile {
     fileName: string;
     folder: string;
 }
+
+export declare interface IOrder {
+    id: number;
+    userId: number;
+    total: number;
+    subtotal: number;
+    discount: number;
+    couponCode: string;
+    createdAt: string;
+}
+
+export type NewOrder = Partial<NewObj<IOrder>>;
+
+export declare interface IOrderItem {
+    id: number;
+    orderId: number;
+    productId: number;
+    quantity: number;
+}
+
+export declare interface IOrderFull extends IOrder {
+    items: IProduct[];
+}
