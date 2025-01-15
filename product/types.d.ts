@@ -66,3 +66,9 @@ export declare interface IOrderFull extends IOrder {
     items: IProduct[];
     files: IProductFile[];
 }
+
+export declare interface IWishlistItem {
+    id: number;
+    userId: number;
+    productId: number;
+}
