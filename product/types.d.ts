@@ -64,4 +64,5 @@ export declare interface IOrderItem {
 
 export declare interface IOrderFull extends IOrder {
     items: IProduct[];
+    files: IProductFile[];
 }
