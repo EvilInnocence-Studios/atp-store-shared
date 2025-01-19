@@ -72,3 +72,8 @@ export declare interface IWishlistItem {
     userId: number;
     productId: number;
 }
+
+export declare interface IOrderCreateRequest {
+    ids: number[];
+    couponCode: string;
+}
