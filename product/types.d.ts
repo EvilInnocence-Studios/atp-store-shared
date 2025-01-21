@@ -66,7 +66,7 @@ export declare interface IOrderItem {
     quantity: number;
 }
 
-export declare interface IOrderFull extends IOrder {
+export declare interface IOrderFull extends SafeOrder {
     items: IProduct[];
     files: IProductFile[];
 }
