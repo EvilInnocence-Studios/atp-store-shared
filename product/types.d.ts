@@ -57,8 +57,6 @@ export declare interface IOrder {
 
 export type NewOrder = Partial<NewObj<IOrder>>;
 
-export type SafeOrder = Omit<IOrder, "transactionId">;
-
 export declare interface IOrderItem {
     id: number;
     orderId: number;
@@ -66,7 +64,7 @@ export declare interface IOrderItem {
     quantity: number;
 }
 
-export declare interface IOrderFull extends SafeOrder {
+export declare interface IOrderFull extends IOrder {
     items: IProduct[];
     files: IProductFile[];
 }
