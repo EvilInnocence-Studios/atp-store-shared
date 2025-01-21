@@ -49,11 +49,15 @@ export declare interface IOrder {
     total: number;
     subtotal: number;
     discount: number;
+    status: "pending" | "complete";
+    transactionId: string | null;
     couponCode: string;
     createdAt: string;
 }
 
 export type NewOrder = Partial<NewObj<IOrder>>;
+
+export type SafeOrder = Omit<IOrder, "transactionId">;
 
 export declare interface IOrderItem {
     id: number;
