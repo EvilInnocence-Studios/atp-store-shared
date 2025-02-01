@@ -18,3 +18,5 @@ export declare interface IDiscount {
     couponCode: string;
     permissionId: number | null;
 }
+
+export type NewDiscount = Omit<IDiscount, "id">;

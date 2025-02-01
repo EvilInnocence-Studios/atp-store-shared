@@ -3,8 +3,8 @@ import { IDiscount, IDiscountCalculator } from "./types";
 import { IPermission } from "../../uac-shared/permissions/types";
 
 export const FlatPercentageProductDiscount = (percentage: number, permissionId:number | null, userPermissions: IPermission[]):IDiscountCalculator => ({
-    productSalePrice: (_product, price) =>
-        !permissionId || userPermissions.map(prop("id")).includes(permissionId)
+    productSalePrice: (product, price) =>
+        (!permissionId || userPermissions.map(prop("id")).includes(permissionId)) && !product.brokeredAt
             ? price * (1 - percentage)
             : price,
     cartDiscount: (_products, _subtotal) => 0.0,
