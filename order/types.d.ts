@@ -40,7 +40,3 @@ export declare interface ICartTotals {
     discount: number;
     total: number;
 }
-
-export const IDiscount = {
-    
-}
