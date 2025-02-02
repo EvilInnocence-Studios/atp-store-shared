@@ -1,6 +1,6 @@
 export declare interface IOrder {
-    id: number;
-    userId: number;
+    id: string;
+    userId: string;
     total: number;
     subtotal: number;
     discount: number;
@@ -13,9 +13,9 @@ export declare interface IOrder {
 export type NewOrder = Partial<NewObj<IOrder>>;
 
 export declare interface IOrderItem {
-    id: number;
-    orderId: number;
-    productId: number;
+    id: string;
+    orderId: string;
+    productId: string;
     quantity: number;
 }
 
@@ -25,13 +25,13 @@ export declare interface IOrderFull extends IOrder {
 }
 
 export declare interface IWishlistItem {
-    id: number;
-    userId: number;
-    productId: number;
+    id: string;
+    userId: string;
+    productId: string;
 }
 
 export declare interface IOrderCreateRequest {
-    ids: number[];
+    ids: string[];
     couponCode: string;
 }
 

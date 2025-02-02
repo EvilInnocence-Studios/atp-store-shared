@@ -13,12 +13,12 @@ export declare interface IDiscountCalculator {
 }
 
 export declare interface IDiscount {
-    id: number;
+    id: string;
     name: string;
     type: "product" | "cart";
     amount: number;
     couponCode: string;
-    permissionId: number | null;
+    permissionId: string | null;
 }
 
 export type NewDiscount = Omit<IDiscount, "id">;

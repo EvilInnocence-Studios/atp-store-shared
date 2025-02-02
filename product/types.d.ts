@@ -1,7 +1,7 @@
 import { NewObj } from "../../core-shared/express/types";
 
 export declare interface IProduct {
-    id: number;
+    id: string;
     name: string;
     sku: string;
     url: string;
@@ -17,8 +17,8 @@ export declare interface IProduct {
     metaTitle: string | null;
     metaDescription: string | null;
     metaKeywords: string | null;
-    thumbnailId: number | null;
-    mainImageId: number | null;
+    thumbnailId: string | null;
+    mainImageId: string | null;
 }
 
 export declare interface IProductFull extends IProduct {
@@ -29,17 +29,16 @@ export declare interface IProductFull extends IProduct {
 export type NewProduct = Partial<NewObj<IProduct>>;
 
 export declare interface IProductMedia {
-    id: number;
-    productId: number;
+    id: string;
+    productId: string;
     url: string;
     caption: string;
     order: number;
 }
 
 export declare interface IProductFile {
-    id: number;
-    productId: number;
+    id: string;
+    productId: string;
     fileName: string;
     folder: string;
 }
-
