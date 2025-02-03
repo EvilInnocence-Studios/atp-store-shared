@@ -1,7 +1,6 @@
 import { prop } from "ts-functional";
 import { IDiscount, IDiscountCalculator } from "./types";
 import { IPermission } from "../../uac-shared/permissions/types";
-import { debugPort } from "process";
 
 export const FlatPercentageProductDiscount = (percentage: number, permissionId:string | null, userPermissions: IPermission[]):IDiscountCalculator => ({
     name: "FlatPercentageProductDiscount",
