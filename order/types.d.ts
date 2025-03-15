@@ -1,3 +1,5 @@
+import { IProductFile } from "@store-shared/product/types";
+
 export declare interface IOrder {
     id: string;
     userId: string;
