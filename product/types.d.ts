@@ -10,8 +10,6 @@ export declare interface IProduct {
     productType: "digital" | "grouped";
     subscriptionOnly: boolean;
     releaseDate: string;
-    brokeredAt: string | null;
-    brokerageProductId: string | null;
     price: number;
     enabled: boolean;
     metaTitle: string | null;
