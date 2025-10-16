@@ -17,6 +17,7 @@ export declare interface IProduct {
     metaKeywords: string | null;
     thumbnailId: string | null;
     mainImageId: string | null;
+    isDiscountable: boolean;
 }
 
 export declare interface IProductFull extends IProduct {

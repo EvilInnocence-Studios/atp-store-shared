@@ -2,11 +2,10 @@ import { prop } from "ts-functional";
 import { IDiscount, IDiscountCalculator } from "./types";
 import { IPermission } from "../../uac-shared/permissions/types";
 
-// TODO: Add isDiscountable field to products, default to true except for brokered products
 export const FlatPercentageProductDiscount = (percentage: number, permissionId:string | null, userPermissions: IPermission[]):IDiscountCalculator => ({
     name: "FlatPercentageProductDiscount",
     productSalePrice: (product, price) =>
-        (!permissionId || userPermissions.map(prop("id")).includes(permissionId)) // && product.isDiscountable
+        (!permissionId || userPermissions.map(prop("id")).includes(permissionId)) && product.isDiscountable
             ? price * (1 - percentage)
             : price,
     cartDiscount: (_products, _subtotal, _discount) => 0.0,
