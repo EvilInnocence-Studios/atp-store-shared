@@ -12,6 +12,7 @@ export declare interface IProduct {
     releaseDate: string;
     price: number;
     enabled: boolean;
+    pinned: boolean;
     metaTitle: string | null;
     metaDescription: string | null;
     metaKeywords: string | null;
